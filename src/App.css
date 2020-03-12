@@ -1,38 +1,277 @@
-.App {
-  text-align: center;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*.home-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    }*/
+
+
+/*-------------------------------------------HOME PAGE------------------------------------------*/
+.Home {
+    height: 95vh;
+    background: #FF512F; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DD2476, #FF512F); /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to left, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url(img/IMG_0248.jpeg);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*Takes care of the positioning of the items on the home page*/
+.home-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.banner__text {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.banner__text--main {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+
+.banner__text--sub {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .8rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.banner__text--sub-1 {
+    display: inline-block;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.banner__text--sub-2 {
+    display: inline-block;
+}
+
+.banner__text--sub-3 {
+    display: inline-block;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+/*--------HOME PAGE BUTTON---------*/
+.btn {
+    text-align: center;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .9rem 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1rem;
+}
+
+    .btn:link, .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .9rem 3rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1rem;
+    }
+
+.btn:hover {
+    background-color: rgba(255, 255, 255,.95);
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+    .btn:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+    background-color: rgba(255, 255, 255, .8);
+    border: solid 3px rgba(255, 255, 255, 1);
+    color: #777;
+}
+
+    .btn--white::after {
+        background-color: #fff;
+    }
+
+.banner__text {
+    position: absolute;
+}
+
+/*-----------------------------------RESUME PAGE--------------------------------*/
+
+.header-links li {
+    display: inline;
+    float: right;
+    padding: .7rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+}
+
+    .header-links li:hover {
+        border: 2px solid black;
+    }
+
+    .header-links li:active {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        color: pink;
+        text-align: center;
+    }
+
+/*------------------------------------------PROJECTS PAGE-----------------------------------------*/
+.projects-page {
+    padding: 10rem 0;
+    background-image: linear-gradient(to left, rgba(0, 219, 222, 0.9), rgba(252, 0, 255, 0.9)), url(img/IMG_0248.jpeg);
+    background-size: cover;
+    /*margin-top: -1rem;*/
+}
+
+.card {
+    height: 30rem;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: translateY(-.5rem) scale(1.03);
+}
+
+.card-text {
+    color: #999;
+    font-size: 1rem;
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row [class^="col-"] {
+    float: left;
+}
+
+    .row [class^="col-"]:not(:last-child) {
+        margin-right: 4rem; /*All columns but the last(third one in this case) have a space of 4rem after them*/
+    }
+
+.row .col-1-of-3 {
+    width: calc((100% - 2 * 4rem) / 3); /*4rem is the size of the gutter(space) between the columns*/
 }
