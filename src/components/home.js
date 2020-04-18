@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+//import Nav from './nav';
 
 function Home () {
     return (
-		<header class="Home">
-
+		<body class="Home">
 
 			<div class="home-grid">
 				<div banner__text>
@@ -36,7 +36,7 @@ function Home () {
 
 			</div>
 
-		</header>
+		</body>
     );
 }
 

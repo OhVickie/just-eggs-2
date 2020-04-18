@@ -1,16 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 function Nav() {
 	return (
-		<header class="header-links">
-			<ul>
-				<Link to="/resume"><li>Resume</li></Link>
-				<Link to="/projects"><li>Projects</li></Link>
-				<Link to="/contact"><li>Contact</li></Link>
+		<div class="header-links">
+			<div><h4 className="header-link--title">My Portfolio</h4></div>
+			<ul className="header-links--list">
+				<li className="header-links--item"><Link to="/">Home</Link></li>
+				<li className="header-links--item"><Link to="/resume">Resume</Link></li>
+				<li className="header-links--item"><Link to="/projects">Projects</Link></li>
+				<li className="header-links--item"><Link to="/contact">Contact</Link></li>
 			</ul>
 
-		</header>
+		</div>
 	);
 }
 
