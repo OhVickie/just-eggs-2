@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 
 function Nav() {
 	return (
-		<div class="header-links">
+		<div className="header-links">
 			<div><h4 className="header-link--title"><Link to="/">My Portfolio</Link></h4></div>
 			<ul className="header-links--list">
 				{/*<li className="header-links--item"><Link to="/">Home</Link></li>*/}

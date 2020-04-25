@@ -12,8 +12,8 @@ function Resume() {
 
 			<div className="resume-page--content">
 				<h1>Resume</h1>
-				<div class="row">
-					<div class="col-1-of-2">
+				<div className="row">
+					<div className="">
 						<h2></h2>
 						<p></p>
 						<hr></hr>
@@ -22,11 +22,30 @@ function Resume() {
 							<li></li>
 						</p>
 					</div>
-					<div class="col-1-of-2">
-						<h2>Education</h2>
-						<Education />
+					<div className="">
+						<Education 
+							title="Education"
+							degreeName="Bachelor of Science in Computer Engineering (Co-Op)"
+							schoolName="University of Ottawa"
+							year="2012 - 2018"
+						/>
 						<h2>Experience</h2>
-						<Experience />
+						<Experience 
+							title="Experience"
+							positionName=""
+							companyName=""
+							role1=""
+							role2=""
+							role3=""
+						/>
+						<Experience 
+							title="Experience"
+							positionName=""
+							companyName=""
+							role1=""
+							role2=""
+							role3=""
+						/>
 						<h2>Skills</h2>
 						<Skills/>
 					</div>

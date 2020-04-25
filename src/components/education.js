@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Education() {
+function Education(props) {
 	return (
-		<div class="header-links">
-			
+		<div className="header-links">
+			<h2>{props.title}</h2>
+			<p>{props.degreeName}</p>
+			<p>{props.schoolName}</p>
+			<p>{props.year}</p>
 		</div>
 	);
 }
